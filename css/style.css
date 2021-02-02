@@ -8,6 +8,7 @@ margin: 0%;
 padding: 0%;
 max-width: 100vw;
 text-decoration: none;
+box-sizing: border-box;
 }
 
 h1 {
@@ -80,7 +81,6 @@ h3 {
     text-align: center;
 }
 
-
 .card-title {
     color: black;
     padding: 2.8rem 0rem 2rem;
@@ -131,7 +131,6 @@ h3 {
     padding: 0.75em 0em;
 }
 
-
 #contact span {
     color: black;
     font-weight: bolder;
@@ -157,7 +156,9 @@ footer * {
 
 /* Mobile screens */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) 
+
+{
     .non-mobile {
         display: none;
     }
@@ -165,13 +166,105 @@ footer * {
 
 /* Tablets screens */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) 
+
+{
     .mobile {
         display: none;
     }
+
+    .menu-button {
+        background: none;
+    }
+
+    li.menu-button {
+        display: inline-block;
+        padding: 20px;
+    }
+
+    .profile-info {
+        display: flex;
+        display: inline-block;
+        padding: 0% 5%;
+    }
+
+    .profile-info p {
+        float: left;
+        max-width: 40%;
+        text-align: left;
+        padding-top: 0%;
+    }
+
+    .profile-info img {
+        float: right;
+    }
+
+    .portfolio-card {
+        columns: 2;
+    }
+
+    .portfolio-card div {
+        display: inline-block;
+    }
+
+    #skills img {
+        width: 90px;
+        height: 90px;
+    }
+
+    #contact p {
+        max-width: 50%;
+    }
+
+    .non-mobile {
+        margin: 0rem 2rem;
+    }
+
+    .non-mobile li:not(:first-child) {
+        float: right;
+    }
+
 }
 
 
 /* Computer screens */
 
+@media screen and (min-width: 1024px) 
+{   
+    * {
+        font-size: 20px;
+    }
 
+    h2 {
+        font-size: 32px;
+    }
+
+    .main-nav {
+        margin: 1rem 2rem;
+    }
+
+    .main-nav a:hover {
+        background-color: black;
+        color: blanchedalmond;
+        padding: 10px;
+    }
+
+    .logo {
+        float: left;
+        margin-right: 20%;
+    }
+
+    .profile-info img {
+        min-width: 45%;            
+    }
+
+    .portfolio-card {
+        columns: 3;
+    }
+
+    #skills img {
+        width: 110px;
+        height: 110px;
+    }
+
+}
